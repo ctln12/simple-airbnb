@@ -4,10 +4,11 @@
   <div class="flat-list">
     <% @flats.each do |flat| %>
       <div class="card-trip">
-        <%= image_tag flat.image_url %>
+        <%= image_tag flat.image_url, width: "100%" %>
         <div class="card-trip-infos">
           <h2><%= flat.name %></h2>
           <h2 class="card-trip-pricing"><%= flat.currency %> <%= flat.price %></h2>
+          <%= link_to "View", flat_path(flat), class: 'btn btn-dark' %>
         </div>
       </div>
     <% end %>
