@@ -18,6 +18,11 @@ require("channels")
 
 import 'bootstrap';
 
+import 'select2/dist/css/select2.css';
+
+import { selectCurrency } from "../components/select";
+
 document.addEventListener('turbolinks:load', () => {
   // Call functions here
+  selectCurrency();
 });
