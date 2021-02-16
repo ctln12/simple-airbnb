@@ -1,0 +1,11 @@
+<div class="container flat-form">
+  <h1>Create a New Flat</h1>
+
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url %>
+    <%= f.input :price %>
+    <%= f.input :currency, collection: ['CHF', 'EUR', 'USD'] %>
+    <%= f.submit 'Add Flat', class: 'btn btn-success' %>
+  <% end %>
+</div>
